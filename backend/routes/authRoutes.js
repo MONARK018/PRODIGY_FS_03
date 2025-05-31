@@ -8,6 +8,7 @@ router.post("/register", registerUser);
 router.post("/login", loginUser);
 
 router.get("/verify-user", authMiddleware, (req, res) => {
+    
     res.json({ success: true, user: req.user });
 });
 
